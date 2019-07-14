@@ -1,0 +1,501 @@
+let questions = [
+    // {
+    //   "question": ["sounds/alligatorHiss (1).mp3"],
+    //   "choice1": ["images/alligatorHiss (1).jpg"],
+    //   "choice2": ["images/bat1.jpg"],
+    //   "choice3": ["images/bear.jpg"],
+    //   "choice4": ["images/Camel (1).jpg"],
+    //   "answer": 1
+    // },
+    // {
+    //   "question": ["sounds/baboon.mp3"],
+    //   "choice1": ["images/baboon.jpg"],
+    //   "choice2": ["images/bear.jpg"],
+    //   "choice3": ["images/CHIPMUNK.jpg"],
+    //   "choice4": ["images/lioncub2.jpg"],
+    //   "answer": 1
+    // },
+    // {
+    //   "question": ["sounds/bat1.mp3"],
+    //   "choice1": ["images/penguin3.jpg"],
+    //   "choice2": ["images/whalesurfaces.jpg"],
+    //   "choice3": ["images/raccoon3 (1).jpg"],
+    //   "choice4": ["images/bat1 (1).jpg"],
+    //   "answer": 4
+    // },
+    // {
+    //   "question": ["sounds/bear.mp3"],
+    //   "choice1": ["images/hippo3.jpg"],
+    //   "choice2": ["images/bear.jpg"],
+    //   "choice3": ["images/Camel (1).jpg"],
+    //   "choice4": ["images/koala[1].jpg"],
+    //   "answer": 2
+    // },
+    // {
+    //   "question": ["sounds/BOB-CAT (1).mp3"],
+    //   "choice1": ["images/Tiger7 (1).jpg"],
+    //   "choice2": ["images/lemur4 (1).jpg"],
+    //   "choice3": ["images/BOB-CAT (1).jpg"],
+    //   "choice4": ["images/seal3 (1).jpg"],
+    //   "answer": 3
+    // },
+    // {
+    //   "question": ["sounds/Camel (1).mp3"],
+    //   "choice1": ["images/hippo3.jpg"],
+    //   "choice2": ["images/bear_polar.jpg"],
+    //   "choice3": ["images/sealions (1).jpg"],
+    //   "choice4": ["images/Camel (1).jpg"],
+    //   "answer": 4
+    // },
+    // {
+    //   "question": ["sounds/Cat2.mp3"],
+    //   "choice1": ["images/BOB-CAT (1).jpg"],
+    //   "choice2": ["images/Cat2.jpg"],
+    //   "choice3": ["images/SQMarsupflyingsquirrel2 (1).jpg"],
+    //   "choice4": ["images/seal3 (1).jpg"],
+    //   "answer": 2
+    // },
+    // {
+    //   "question": ["sounds/cheeta (1).mp3"],
+    //   "choice1": ["images/cheeta (1).jpg"],
+    //   "choice2": ["images/lioncub2.jpg"],
+    //   "choice3": ["images/crocodile.jpg"],
+    //   "choice4": ["images/baboon.jpg"],
+    //   "answer": 1
+    // },
+    // {
+    //   "question": ["sounds/CHIPMUNK.mp3"],
+    //   "choice1": ["images/hippo3.jpg"],
+    //   "choice2": ["images/whalesurfaces.jpg"],
+    //   "choice3": ["images/CHIPMUNK.jpg"],
+    //   "choice4": ["images/seal3 (1).jpg"],
+    //   "answer": 3
+    // },
+    // {
+    //   "question": ["sounds/crocodile.mp3"],
+    //   "choice1": ["images/hippo3.jpg"],
+    //   "choice2": ["images/crocodile.jpg"],
+    //   "choice3": ["images/sealions (1).jpg"],
+    //   "choice4": ["images/seal3 (1).jpg"],
+    //   "answer": 2
+    // },
+    // {
+    //  " question": ["sounds/dog.mp3"],
+    //   "choice1": ["images/hippo3.jpg"],
+    //   "choice2": ["images/whalesurfaces.jpg"],
+    //   "choice3": ["images/dog.jpg"],
+    //   "choice4": ["images/seal3 (1).jpg"],
+    //   "answer": 3
+    // },
+    // {
+    //   "question": ["sounds/dolphin1.mp3"],
+    //   "choice1": ["images/dolphin1.jpeg"],
+    //   "choice2": ["images/whalesurfaces.jpg"],
+    //   "choice3": ["images/sealions (1).jpg"],
+    //   "choice4": ["images/seal3 (1).jpg"],
+    //   "answer": 1
+    // },
+    // {
+    //   "question": ["sounds/elephantcub (1).mp3"],
+    //   "choice1": ["images/hippo3.jpg"],
+    //   "choice2": ["images/whalesurfaces.jpg"],
+    //   "choice3": ["images/elephantcub (1).jpg"],
+    //   "choice4": ["images/seal3 (1).jpg"],
+    //   "answer": 3
+    // },
+    // {
+    //   "question": ["sounds/greyfox-vs-coon (1).mp3"],
+    //   "choice1": ["images/hippo3.jpg"],
+    //   "choice2": ["images/greyfox-vs-coon (1).jpg"],
+    //   "choice3": ["images/sealions (1).jpg"],
+    //   "choice4": ["images/seal3 (1).jpg"],
+    //   "answer": 2
+    // },
+    // {
+    //   "question": ["sounds/hippo3.mp3"],
+    //   "choice1": ["images/hippo3.jpg"],
+    //   "choice2": ["images/whalesurfaces.jpg"],
+    //   "choice3": ["images/sealions (1).jpg"],
+    //   "choice4": ["images/seal3 (1).jpg"],
+    //   "answer": 1
+    // },
+    // {
+    //   "question": ["sounds/hyena3.mp3"],
+    //   "choice1": ["images/hippo3.jpg"],
+    //   "choice2": ["images/whalesurfaces.jpg"],
+    //   "choice3": ["images/hyena3.jpg"],
+    //   "choice4": ["images/seal3 (1).jpg"],
+    //   "answer": 3 
+    // },
+    // {
+    //   "question": ["sounds/koala[1].mp3"],
+    //   "choice1": ["images/koala[1].jpg"],
+    //   "choice2": ["images/whalesurfaces.jpg"],
+    //   "choice3": ["images/sealions (1).jpg"],
+    //   "choice4": ["images/seal3 (1).jpg"],
+    //   "answer": 1
+    // },
+    // {
+    //   "question": ["sounds/lemur4 (1).mp3"],
+    //   "choice1": ["images/hippo3.jpg"],
+    //   "choice2": ["images/whalesurfaces.jpg"],
+    //   "choice3": ["images/sealions (1).jpg"],
+    //   "choice4": ["images/lemur4 (1).jpg"],
+    //   "answer": 4
+    // },
+    // {
+    //   "question": ["sounds/lioncub2.mp3"],
+    //   "choice1": ["images/hippo3.jpg"],
+    //   "choice2": ["images/lioncub2.jpg"],
+    //   "choice3": ["images/sealions (1).jpg"],
+    //   "choice4": ["images/seal3 (1).jpg"],
+    //   "answer": 2
+    // },
+    // {
+    //   "question": ["sounds/penguin3.mp3"],
+    //   "choice1": ["images/hippo3.jpg"],
+    //   "choice2": ["images/whalesurfaces.jpg"],
+    //   "choice3": ["images/sealions (1).jpg"],
+    //   "choice4": ["images/penguin3.jpg"],
+    //   "answer": 4
+    // },
+    // {
+    //   "question": ["sounds/pig.mp3"],
+    //   "choice1": ["images/hippo3.jpg"],
+    //   "choice2": ["images/pig.jpg"],
+    //   "choice3": ["images/sealions (1).jpg"],
+    //   "choice4": ["images/seal3 (1).jpg"],
+    //   "answer": 2
+    // },
+    // {
+    //   "question": ["sounds/raccoon3 (1).mp3"],
+    //   "choice1": ["images/hippo3.jpg"],
+    //   "choice2": ["images/raccoon3 (1).jpg"],
+    //   "choice3": ["images/sealions (1).jpg"],
+    //   "choice4": ["images/seal3 (1).jpg"],
+    //   "answer": 2
+    // },
+    // {
+    //   "question": ["sounds/rhinos5 (1).mp3"],
+    //   "choice1": ["images/rhinos5 (1).jpg"],
+    //   "choice2": ["images/whalesurfaces.jpg"],
+    //   "choice3": ["images/sealions (1).jpg"],
+    //   "choice4": ["images/seal3 (1).jpg"],
+    //   "answer": 1
+    // },
+    // {
+    //   "question": ["sounds/seal3 (1).mp3"],
+    //   "choice1": ["images/hippo3.jpg"],
+    //   "choice2": ["images/whalesurfaces.jpg"],
+    //   "choice3": ["images/sealions (1).jpg"],
+    //   "choice4": ["images/seal3 (1).jpg"],
+    //   "answer": 4
+    // },
+    // {
+    //   "question": ["sounds/sealions (1).mp3"],
+    //   "choice1": ["images/hippo3.jpg"],
+    //   "choice2": ["images/whalesurfaces.jpg"],
+    //   "choice3": ["images/sealions (1).jpg"],
+    //   "choice4": ["images/seal3 (1).jpg"],
+    //   "answer": 3
+    // },
+    // {
+    //   "question": ["sounds/snakehit2.mp3"],
+    //   "choice1": ["images/hippo3.jpg"],
+    //   "choice2": ["images/snakehit2.jpg"],
+    //   "choice3": ["images/sealions (1).jpg"],
+    //   "choice4": ["images/seal3 (1).jpg"],
+    //   "answer": 2
+    // },
+    // {
+    //   "question": ["sounds/SQMarsupflyingsquirrel2 (1).mp3"],
+    //   "choice1": ["images/hippo3.jpg"],
+    //   "choice2": ["images/SQMarsupflyingsquirrel2 (1).jpg"],
+    //   "choice3": ["images/sealions (1).jpg"],
+    //   "choice4": ["images/seal3 (1).jpg"],
+    //   "answer": 2
+    // },
+    // {
+    //   "question": ["sounds/Tiger7 (1).mp3"],
+    //   "choice1": ["images/hippo3.jpg"],
+    //   "choice2": ["images/whalesurfaces.jpg"],
+    //   "choice3": ["images/Tiger7 (1).jpg"],
+    //   "choice4": ["images/seal3 (1).jpg"],
+    //   "answer": 3
+    // },
+    // {
+    //   "question": ["sounds/whalesurfaces.mp3"],
+    //   "choice1": ["images/hippo3.jpg"],
+    //   "choice2": ["images/whalesurfaces.jpg"],
+    //   "choice3": ["images/sealions (1).jpg"],
+    //   "choice4": ["images/seal3 (1).jpg"],
+    //   "answer": 2
+    // },
+    // {
+    //   "question": ["sounds/wolf8.mp3"],
+    //   "choice1": ["images/hippo3.jpg"],
+    //   "choice2": ["images/whalesurfaces.jpg"],
+    //   "choice3": ["images/sealions (1).jpg"],
+    //   "choice4": ["images/wolf8.jpg"],
+    //   "answer": 4
+    // },
+    // {
+    //   "question": ["sounds/zebra7 (1).mp3"],
+    //   "choice1": ["images/zebra7 (1).jpg"],
+    //   "choice2": ["images/whalesurfaces.jpg"],
+    //   "choice3": ["images/sealions (1).jpg"],
+    //   "choice4": ["images/seal3 (1).jpg"],
+    //   "answer": 1
+    // }
+  
+
+
+  {
+    question: ["sounds/alligatorHiss (1).mp3"],
+    choice1: ["images/alligatorHiss (1).jpg"],
+    choice2: ["images/bat1.jpg"],
+    choice3: ["images/bear.jpg"],
+    choice4: ["images/Camel (1).jpg"],
+    answer: 1
+  },
+  {
+    question: ["sounds/baboon.mp3"],
+    choice1: ["images/baboon.jpg"],
+    choice2: ["images/bear.jpg"],
+    choice3: ["images/CHIPMUNK.jpg"],
+    choice4: ["images/lioncub2.jpg"],
+    answer: 1
+  },
+  {
+    question: ["sounds/bat1.mp3"],
+    choice1: ["images/penguin3.jpg"],
+    choice2: ["images/whalesurfaces.jpg"],
+    choice3: ["images/raccoon3 (1).jpg"],
+    choice4: ["images/bat1 (1).jpg"],
+    answer: 4
+  },
+  {
+    question: ["sounds/bear.mp3"],
+    choice1: ["images/hippo3.jpg"],
+    choice2: ["images/bear.jpg"],
+    choice3: ["images/Camel (1).jpg"],
+    choice4: ["images/koala[1].jpg"],
+    answer: 2
+  },
+  {
+    question: ["sounds/BOB-CAT (1).mp3"],
+    choice1: ["images/Tiger7 (1).jpg"],
+    choice2: ["images/lemur4 (1).jpg"],
+    choice3: ["images/BOB-CAT (1).jpg"],
+    choice4: ["images/seal3 (1).jpg"],
+    answer: 3
+  },
+  {
+    question: ["sounds/Camel (1).mp3"],
+    choice1: ["images/hippo3.jpg"],
+    choice2: ["images/bear_polar.jpg"],
+    choice3: ["images/sealions (1).jpg"],
+    choice4: ["images/Camel (1).jpg"],
+    answer: 4
+  },
+  {
+    question: ["sounds/Cat2.mp3"],
+    choice1: ["images/BOB-CAT (1).jpg"],
+    choice2: ["images/Cat2.jpg"],
+    choice3: ["images/SQMarsupflyingsquirrel2 (1).jpg"],
+    choice4: ["images/seal3 (1).jpg"],
+    answer: 2
+  },
+  {
+    question: ["sounds/cheeta (1).mp3"],
+    choice1: ["images/cheeta (1).jpg"],
+    choice2: ["images/lioncub2.jpg"],
+    choice3: ["images/crocodile.jpg"],
+    choice4: ["images/baboon.jpg"],
+    answer: 1
+  },
+  {
+    question: ["sounds/CHIPMUNK.mp3"],
+    choice1: ["images/hippo3.jpg"],
+    choice2: ["images/whalesurfaces.jpg"],
+    choice3: ["images/CHIPMUNK.jpg"],
+    choice4: ["images/seal3 (1).jpg"],
+    answer: 3
+  },
+  {
+    question: ["sounds/crocodile.mp3"],
+    choice1: ["images/hippo3.jpg"],
+    choice2: ["images/crocodile.jpg"],
+    choice3: ["images/sealions (1).jpg"],
+    choice4: ["images/seal3 (1).jpg"],
+    answer: 2
+  },
+  {
+    question: ["sounds/dog.mp3"],
+    choice1: ["images/hippo3.jpg"],
+    choice2: ["images/whalesurfaces.jpg"],
+    choice3: ["images/dog.jpg"],
+    choice4: ["images/seal3 (1).jpg"],
+    answer: 3
+  },
+  {
+    question: ["sounds/dolphin1.mp3"],
+    choice1: ["images/dolphin1.jpeg"],
+    choice2: ["images/whalesurfaces.jpg"],
+    choice3: ["images/sealions (1).jpg"],
+    choice4: ["images/seal3 (1).jpg"],
+    answer: 1
+  },
+  {
+    question: ["sounds/elephantcub (1).mp3"],
+    choice1: ["images/hippo3.jpg"],
+    choice2: ["images/whalesurfaces.jpg"],
+    choice3: ["images/elephantcub (1).jpg"],
+    choice4: ["images/seal3 (1).jpg"],
+    answer: 3
+  },
+  {
+    question: ["sounds/greyfox-vs-coon (1).mp3"],
+    choice1: ["images/hippo3.jpg"],
+    choice2: ["images/greyfox-vs-coon (1).jpg"],
+    choice3: ["images/sealions (1).jpg"],
+    choice4: ["images/seal3 (1).jpg"],
+    answer: 2
+  },
+  {
+    question: ["sounds/hippo3.mp3"],
+    choice1: ["images/hippo3.jpg"],
+    choice2: ["images/whalesurfaces.jpg"],
+    choice3: ["images/sealions (1).jpg"],
+    choice4: ["images/seal3 (1).jpg"],
+    answer: 1
+  },
+  {
+    question: ["sounds/hyena3.mp3"],
+    choice1: ["images/hippo3.jpg"],
+    choice2: ["images/whalesurfaces.jpg"],
+    choice3: ["images/hyena3.jpg"],
+    choice4: ["images/seal3 (1).jpg"],
+    answer: 3 
+  },
+  {
+    question: ["sounds/koala[1].mp3"],
+    choice1: ["images/koala[1].jpg"],
+    choice2: ["images/whalesurfaces.jpg"],
+    choice3: ["images/sealions (1).jpg"],
+    choice4: ["images/seal3 (1).jpg"],
+    answer: 1
+  },
+  {
+    question: ["sounds/lemur4 (1).mp3"],
+    choice1: ["images/hippo3.jpg"],
+    choice2: ["images/whalesurfaces.jpg"],
+    choice3: ["images/sealions (1).jpg"],
+    choice4: ["images/lemur4 (1).jpg"],
+    answer: 4
+  },
+  {
+    question: ["sounds/lioncub2.mp3"],
+    choice1: ["images/hippo3.jpg"],
+    choice2: ["images/lioncub2.jpg"],
+    choice3: ["images/sealions (1).jpg"],
+    choice4: ["images/seal3 (1).jpg"],
+    answer: 2
+  },
+  {
+    question: ["sounds/penguin3.mp3"],
+    choice1: ["images/hippo3.jpg"],
+    choice2: ["images/whalesurfaces.jpg"],
+    choice3: ["images/sealions (1).jpg"],
+    choice4: ["images/penguin3.jpg"],
+    answer: 4
+  },
+  {
+    question: ["sounds/pig.mp3"],
+    choice1: ["images/hippo3.jpg"],
+    choice2: ["images/pig.jpg"],
+    choice3: ["images/sealions (1).jpg"],
+    choice4: ["images/seal3 (1).jpg"],
+    answer: 2
+  },
+  {
+    question: ["sounds/raccoon3 (1).mp3"],
+    choice1: ["images/hippo3.jpg"],
+    choice2: ["images/raccoon3 (1).jpg"],
+    choice3: ["images/sealions (1).jpg"],
+    choice4: ["images/seal3 (1).jpg"],
+    answer: 2
+  },
+  {
+    question: ["sounds/rhinos5 (1).mp3"],
+    choice1: ["images/rhinos5 (1).jpg"],
+    choice2: ["images/whalesurfaces.jpg"],
+    choice3: ["images/sealions (1).jpg"],
+    choice4: ["images/seal3 (1).jpg"],
+    answer: 1
+  },
+  {
+    question: ["sounds/seal3 (1).mp3"],
+    choice1: ["images/hippo3.jpg"],
+    choice2: ["images/whalesurfaces.jpg"],
+    choice3: ["images/sealions (1).jpg"],
+    choice4: ["images/seal3 (1).jpg"],
+    answer: 4
+  },
+  {
+    question: ["sounds/sealions (1).mp3"],
+    choice1: ["images/hippo3.jpg"],
+    choice2: ["images/whalesurfaces.jpg"],
+    choice3: ["images/sealions (1).jpg"],
+    choice4: ["images/seal3 (1).jpg"],
+    answer: 3
+  },
+  {
+    question: ["sounds/snakehit2.mp3"],
+    choice1: ["images/hippo3.jpg"],
+    choice2: ["images/snakehit2.jpg"],
+    choice3: ["images/sealions (1).jpg"],
+    choice4: ["images/seal3 (1).jpg"],
+    answer: 2
+  },
+  {
+    question: ["sounds/SQMarsupflyingsquirrel2 (1).mp3"],
+    choice1: ["images/hippo3.jpg"],
+    choice2: ["images/SQMarsupflyingsquirrel2 (1).jpg"],
+    choice3: ["images/sealions (1).jpg"],
+    choice4: ["images/seal3 (1).jpg"],
+    answer: 2
+  },
+  {
+    question: ["sounds/Tiger7 (1).mp3"],
+    choice1: ["images/hippo3.jpg"],
+    choice2: ["images/whalesurfaces.jpg"],
+    choice3: ["images/Tiger7 (1).jpg"],
+    choice4: ["images/seal3 (1).jpg"],
+    answer: 3
+  },
+  {
+    question: ["sounds/whalesurfaces.mp3"],
+    choice1: ["images/hippo3.jpg"],
+    choice2: ["images/whalesurfaces.jpg"],
+    choice3: ["images/sealions (1).jpg"],
+    choice4: ["images/seal3 (1).jpg"],
+    answer: 2
+  },
+  {
+    question: ["sounds/wolf8.mp3"],
+    choice1: ["images/hippo3.jpg"],
+    choice2: ["images/whalesurfaces.jpg"],
+    choice3: ["images/sealions (1).jpg"],
+    choice4: ["images/wolf8.jpg"],
+    answer: 4
+  },
+  {
+    question: ["sounds/zebra7 (1).mp3"],
+    choice1: ["images/zebra7 (1).jpg"],
+    choice2: ["images/whalesurfaces.jpg"],
+    choice3: ["images/sealions (1).jpg"],
+    choice4: ["images/seal3 (1).jpg"],
+    answer: 1
+  }
+]

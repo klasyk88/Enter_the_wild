@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Czy wiesz co to za zwierzę?</title>
+    <link rel="stylesheet" href="css/app.css" />
+    <link rel="stylesheet" href="css/game.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div id="game" class="justify-center flex-column">
+        <div id="hud">
+          <div id="hud-item">
+            <p id="progressText" class="hud-prefix">
+              Question
+            </p>
+            <div id="progressBar">
+              <div id="progressBarFull"></div>
+            </div>
+          </div>
+          <div id="hud-item">
+            <p class="hud-prefix">
+              Score
+            </p>
+            <h1 class="hud-main-text" id="score">
+              0
+            </h1>
+          </div>
+        </div>
+        <h2 id="question">Co to za zwierz?</h2>
+        <div class= "play-buttons">
+        <div id="play-button" class="play-button"></div>
+        <!-- <div class="replay-button"></div> -->
+        </div>
+        <audio controls id="audio">
+          <source id= "sound" src="" type="audio/mpeg">
+          Sprawdź czy Twoja wyszkiwarka obsługuje audio:)
+        </audio>
+        <div>
+        <div class="choice-container">
+          <div class="choice-text" data-number="1" id="1"><img src="" class="choice-image" alt="Nie znaleziono lub blad wczytania sprawdz konsole"></div>
+        </div>
+        <div class="choice-container">
+          <div class="choice-text" data-number="2" id="2"><img src="" class="choice-image" alt="Nie znaleziono lub blad wczytania sprawdz konsole"></div>
+        </div>
+        <div class="choice-container">
+          <div class="choice-text" data-number="3" id="3"><img src="" class="choice-image" alt="Nie znaleziono lub blad wczytania sprawdz konsole"></div>
+        </div>
+        <div class="choice-container">
+          <div class="choice-text" data-number="4" id="4"><img src="" class="choice-image" alt="Nie znaleziono lub blad wczytania sprawdz konsole"></div>
+        </div>
+      </div>
+      </div>
+    </div>
+    <script src="js/game.js"></script>
+  </body>
+</html>
